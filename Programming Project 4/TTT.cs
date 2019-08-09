@@ -17,10 +17,8 @@ namespace Programming_Project_4
                 for (int j = 0; j < 3; j++)
                 {
                     game[i, j] = r.Next(0, 2);
-                    Console.WriteLine("[{0}, {1}] = {2}", i, j, game[i, j]);
                 }
             }
-            
             return game;
         }
     }
