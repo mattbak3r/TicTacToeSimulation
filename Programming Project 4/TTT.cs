@@ -49,84 +49,68 @@ namespace Programming_Project_4
             //check is 'x' is the winner
             if (game[0,0] == 1 && game[0,1] == 1 && game[0,2] == 1)
             {
-                winner = 1;
                 x_winner = true;
             }
             else if (game[1, 0] == 1 && game[1, 1] == 1 && game[1, 2] == 1)
             {
-                winner = 1;
                 x_winner = true;
             }
             else if (game[2, 0] == 1 && game[2, 1] == 1 && game[2, 2] == 1)
             {
-                winner = 1;
                 x_winner = true;
             }
             else if (game[0, 0] == 1 && game[1, 0] == 1 && game[2, 0] == 1)
             {
-                winner = 1;
                 x_winner = true;
             }
             else if (game[0, 1] == 1 && game[1, 1] == 1 && game[2, 1] == 1)
             {
-                winner = 1;
                 x_winner = true;
             }
             else if (game[0, 2] == 1 && game[1, 2] == 1 && game[2, 2] == 1)
             {
-                winner = 1;
                 x_winner = true;
             }
             else if (game[0, 0] == 1 && game[1, 1] == 1 && game[2, 2] == 1)
             {
-                winner = 1;
                 x_winner = true;
             }
             else if (game[2, 2] == 1 && game[1, 1] == 1 && game[0, 0] == 1)
             {
-                winner = 1;
                 x_winner = true;
             }
 
             //check if 'o' is the winner
             if (game[0, 0] == 0 && game[0, 1] == 0 && game[0, 2] == 0)
             {
-                winner = 0;
                 o_winner = true;
             }
             else if (game[1, 0] == 0 && game[1, 1] == 0 && game[1, 2] == 0)
             {
-                winner = 0;
                 o_winner = true;
             }
             else if (game[2, 0] == 0 && game[2, 1] == 0 && game[2, 2] == 0)
             {
-                winner = 0;
                 o_winner = true;
             }
             else if (game[0, 0] == 0 && game[1, 0] == 0 && game[2, 0] == 0)
             {
-                winner = 0;
                 o_winner = true;
             }
             else if (game[0, 1] == 0 && game[1, 1] == 0 && game[2, 1] == 0)
             {
-                winner = 0;
                 o_winner = true;
             }
             else if (game[0, 2] == 0 && game[1, 2] == 0 && game[2, 2] == 0)
             {
-                winner = 0;
                 o_winner = true;
             }
             else if (game[0, 0] == 0 && game[1, 1] == 0 && game[2, 2] == 0)
             {
-                winner = 0;
                 o_winner = true;
             }
             else if (game[2, 2] == 0 && game[1, 1] == 0 && game[0, 0] == 0)
             {
-                winner = 0;
                 o_winner = true;
             }
 
@@ -134,6 +118,14 @@ namespace Programming_Project_4
             if (x_winner && o_winner)
             {
                 winner = 2;
+            }
+            else if (x_winner && !o_winner)
+            {
+                winner = 1;
+            }
+            else if (!x_winner && o_winner)
+            {
+                winner = 0;
             }
             return winner;
         }
